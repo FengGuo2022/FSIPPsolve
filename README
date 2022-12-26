@@ -97,5 +97,6 @@ Problem (24) in Example 5.3:
 >> fsippsolve(prob,para,k); %implement and solve the relaxation
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Questions/comments sent to fguo@dlut.edu.cn
+The code is still at its early stage and rudimentary.
+Questions/comments/bugs sent to fguo@dlut.edu.cn
 
