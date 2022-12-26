@@ -2,7 +2,7 @@
 This is the Matlab code for the numerical experiments in the paper
 
 Feng Guo and Meijun Zhang, AN SDP METHOD FOR FRACTIONAL SEMI-INFINITE
-PROGRAMMING PROBLEMS WITH SOS-CONVEX POLYNOMIALS, https://arxiv.org/abs/2110.04737v1
+PROGRAMMING PROBLEMS WITH SOS-CONVEX POLYNOMIALS, arXiv:2110.04737
 
 The relaxations (P_k) and (D_k) in the paper are implemented and
 solved for the FSIPP problem 
@@ -96,6 +96,18 @@ Problem (24) in Example 5.3:
 >> k=1; % set the order of the relaxation
 >> fsippsolve(prob,para,k); %implement and solve the relaxation
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+In numerical_results: Matlab worksheets for exmapkes in the paper:
+results_Ex_5_1_I.pdf.     	-> Problem (19) in Example 5.1 I
+results_Ex_5_1_II.pdf		-> Problem (20) in Example 5.1 II
+results_Ex_5_1_III.pdf		-> Problem (21) in Example 5.1 III 
+results_Ex_5_1_IV.pdf		-> Problem (22) in Example 5.1 IV 
+results_Ex_5_2.pdf		-> Problem (23) in Example 5.2 
+results_Ex_5_3-part1.pdf	-> Problem (24) in Example 5.3
+results_Ex_5_3-part2.pdf	-> Problem (24) in Example 5.3 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 
 The code is still at its early stage and rudimentary.
 Questions/comments/bugs sent to fguo@dlut.edu.cn
