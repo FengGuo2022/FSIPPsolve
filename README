@@ -1,0 +1,101 @@
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+This is the Matlab code for the numerical experiments in the paper
+
+Feng Guo and Meijun Zhang, AN SDP METHOD FOR FRACTIONAL SEMI-INFINITE
+PROGRAMMING PROBLEMS WITH SOS-CONVEX POLYNOMIALS, https://arxiv.org/abs/2110.04737v1
+
+The relaxations (P_k) and (D_k) in the paper are implemented and
+solved for the FSIPP problem 
+           min_{x\in R^m}  f(x)/g(x)
+                      s.t. p(x,y)<=0, \forall y\in Y\subset R^n
+                           phi_1(x)<=0, \ldots, phi_s(x)<=0
+
+Note: Y\subset [-1, 1]^n by scaling if necessary
+Y could be (1) hypercube [-1, 1]^n
+           (2) unit sphere
+           (3) unit ball
+           (4) polytope define by Ay<=b
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Prerequisites to run the code:
+
+*	Yalmip: to implement the relaxations (P_k) and (D_k)
+	https://yalmip.github.io/
+
+*	SeDuMi/Mosek (or other SDP solvers supported by Yalmip): to solve the resulting SDP relaxations
+	SeDuMi: https://sedumi.ie.lehigh.edu/
+	Mosek: https://www.mosek.com/
+
+If the index set Y is a polytope
+*	LattE integrale: to compute the integral of monomials over Y
+	https://github.com/latte-int
+
+If you want to solve relaxations (P_k) with SDSOS/DSOS structures
+*	spotless isos: to solve relaxations (P_k) with SDSOS/DSOS structures
+	https://github.com/anirudhamajumdar/spotless/tree/spotless_isos
+											
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Problem data files:
+P_5_1_I.m:		problem (19) in Example 5.1 I
+P_5_1_II.m:		problem (20) in Example 5.1 II
+P_5_1_III.m:		problem (21) in Example 5.1 III
+P_5_1_IV.m:		problem (22) in Example 5.1 IV
+P_5_2.m:		problem (23) in Example 5.2
+P_5_3.m:		problem (24) in Example 5.3
+
+Instructions to set the problem data are included in each data file
+More problems can be tried by modifying the data file
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+How to run the code: 
+
+Problem (19) in Example 5.1 I: 
+>> [prob,para] = P_5_1_I; %generate the problem and parameters
+>> k=1; % set the order of the relaxation
+>> fsippsolve(prob,para,k); %implement and solve the relaxation
+
+Problem (20) in Example 5.1 II: 
+>> [prob,para] = P_5_1_II; %generate the problem and parameters
+>> k=1; % set the order of the relaxation
+>> fsippsolve(prob,para,k); %implement and solve the relaxation
+
+Problem (21) in Example 5.1 III: 
+>> [prob,para] = P_5_1_III; %generate the problem and parameters
+>> k=1; % set the order of the relaxation
+>> fsippsolve(prob,para,k); %implement and solve the relaxation
+
+Problem (22) in Example 5.1 IV: 
+>> [prob,para] = P_5_1_IV; %generate the problem and parameters
+>> k=1; % set the order of the relaxation
+>> fsippsolve(prob,para,k); %implement and solve the relaxation
+
+
+Problem (23) in Example 5.2: 
+>> [prob,para] = P_5_2; %generate the problem and parameters
+>> prob.r 
+% the random vector a is generated and stored in the field
+% prob.r which can be used for the discretization method implemented in
+% fsippdis.m
+>> k=1; % set the order of the relaxation
+>> fsippsolve(prob,para,k); %implement and solve the relaxation
+% Now compute the lower bound by discretization method for comparison
+>> N=1; % set the number N in the regular grid (12) in the paper
+>> fsippdis(prob.r, N) 
+% compute the lower bounds by the
+% discretization method with the random vector prob.r to generate the
+% problem and number N for the regular grid (12)
+
+Problem (24) in Example 5.3:
+%set choice of the structures sos/sdsos/dsos in the problem data file P_5_3 
+>> [prob,para] = P_5_3 %generate the problem and parameters 
+>> k=1; % set the order of the relaxation
+>> fsippsolve(prob,para,k); %implement and solve the relaxation
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Questions/comments sent to fguo@dlut.edu.cn
+
