@@ -30,7 +30,7 @@ Prerequisites to run the code:
 
 If the index set Y is a polytope
 *	LattE integrale: to compute the integral of monomials over Y
-	https://www.math.ucdavis.edu/~latte/
+	https://github.com/latte-int
 
 If you want to solve relaxations (P_k) with SDSOS/DSOS structures
 *	spotless isos: to solve relaxations (P_k) with SDSOS/DSOS structures
@@ -97,5 +97,19 @@ Problem (24) in Example 5.3:
 >> fsippsolve(prob,para,k); %implement and solve the relaxation
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Questions/comments sent to fguo@dlut.edu.cn
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+In numerical_results: Matlab worksheets for exmapkes in the paper:
+results_Ex_5_1_I.pdf.     	-> Problem (19) in Example 5.1 I
+results_Ex_5_1_II.pdf		-> Problem (20) in Example 5.1 II
+results_Ex_5_1_III.pdf		-> Problem (21) in Example 5.1 III 
+results_Ex_5_1_IV.pdf		-> Problem (22) in Example 5.1 IV 
+results_Ex_5_2.pdf		-> Problem (23) in Example 5.2 
+results_Ex_5_3-part1.pdf	-> Problem (24) in Example 5.3
+results_Ex_5_3-part2.pdf	-> Problem (24) in Example 5.3 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+The code is still at its early stage and rudimentary.
+Questions/comments/bugs sent to fguo@dlut.edu.cn
+
+
 
