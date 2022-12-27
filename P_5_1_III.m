@@ -63,7 +63,7 @@ prob.gstar=1/2;
 %Choose the primal/dual relaxation: 
 %Options:   'primal'; (-> solving (P_k))
 %           'dual': (-> solving (D_k))
-para.relax='primal';
+para.relax='dual';
 %==========================================================================
 %If para.relax='primal', please choose the relaxation type: 
 %Options:   'sos'; (using M_d(Q) in (P_k))
