@@ -77,8 +77,6 @@ para.relaxtype='dsos';
 %flatform to impletement the relaxation (P_k): 
 %Options:   'yalmip'; 
 %           'yalmip+spotless_isos'
-%If para.relax='dual', para.relaxtype='sos' is the only option
-
 %para.platform='yalmip';
 para.platform='yalmip+spotless_isos';
 %==========================================================================
