@@ -18,9 +18,9 @@ function [prob,para] = P_5_2
 
 %==========================================================================
 %Number of the variables x
-prob.Xnum=8; 
+prob.Xnum=10; 
 %Number of the parameters y 
-prob.Ynum=8; 
+prob.Ynum=10; 
 %==========================================================================
 %Please use x to denote the variables and y to denote the parameters
 %DO NOT change
