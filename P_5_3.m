@@ -58,7 +58,7 @@ prob.indset='sphere';
 %==========================================================================
 %constants R and gstar provided by user such that there exists a minimizer
 %u^* satisfying ||u^*||<=R and g(u^*)>=gstar
-prob.R=(ceil(prob.Xnum/(2*prob.Xnum)^(2/d)))^(1/2)+1;
+prob.R=(ceil(prob.Xnum/(2*prob.Xnum)^(2/d)))^(1/2);
 prob.gstar=1/2;
 %==========================================================================
 %Choose the primal/dual relaxation: 
